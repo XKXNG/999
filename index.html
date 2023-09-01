@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLTY</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin-top: 10px;
+            font-weight: 600;
+            text-shadow: #000000 2px 2px 2px solid;
+            height: 100%;
+            text-align: center;
+            color: rgb(255, 187, 0);
+            background-color: #0a0a20;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav {
+            width: 100%;
+            font-weight: bolder;
+        }
+        nav ol {
+            list-style-type: none;
+            word-spacing: 100px;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+        }
+        nav ol li a {
+            text-decoration: none;
+        }
+        audio{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ol>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#tunes">MUSIC</a></li>
+            <li><a href=".footer">ABOUT</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1 style="margin-top: 100px;">We're here for you.</h1>
+        <sup class="sup1">Everywhere</sup>
+        <br><br>
+        <video style="margin-top: 100px;" src="Juice WRLD - Ratio (NEW LEAK_UNRELEASED_CDQ).mp4" controls autoplay></video>
+        <br><br>
+        <select style="margin-top: 100px;" id="audioSelect">
+            <summary>Juice wlrd</summary>
+            <option id="tunes" value="">Select a song</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        <br><br>
+        <footer>
+            <div class="footer">
+                &copy; Made by <a href="http://github.com/KAXXX0/">KAXXX0</a>
+            </div>
+        </footer>
+        <audio id="audio-player" controls></audio>
+    </main>
+    <script>
+        alert('This website is designed for older hardware. You may experience problems using newer browsers.');
+        function playAudio() {
+            const audioPlayer = document.getElementById('audio-player');
+            const audioSelect = document.getElementById('audioSelect');
+
+            audioSelect.addEventListener('change', function() {
+                const selectedOption = audioSelect.options[audioSelect.selectedIndex];
+                const audioSource = selectedOption.value;
+
+                audioPlayer.src = audioSource;
+
+                audioPlayer.play();
+            });
+
+            audioPlayer.addEventListener('ended', function() {
+                const selectedIndex = audioSelect.selectedIndex;
+
+                if (selectedIndex < audioSelect.options.length - 1) {
+                    audioSelect.selectedIndex = selectedIndex + 1;
+
+                    audioSelect.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        window.addEventListener('load', playAudio);
+    </script>
+</body>
+</html>
