@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quake</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            text-shadow: 1px 1px 2px black;
+            margin-top: 10px;
+            font-weight: 600;
+            text-shadow: #000000 2px 2px 2px solid;
+            height: 100%;
+            text-align: center;
+            color: #634402;
+            background: linear-gradient(#331400, #ffffff);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 35px;
+        }
+        nav ol {
+            list-style-type: none;
+            word-spacing: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+        }
+        nav ol li a {
+            text-decoration: none;
+        }
+        audio{
+            color: white;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            bottom: 0;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px 2px 2px solid #ffffff;
+        }
+        select {
+            width: 50%;
+            background-color: #0a0a20;
+            color: #ffffff;
+        }
+        a{
+            color: #e2a600;
+        }
+        a:visited{
+           color: #ffbb00; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ol>
+            <li><a href="uindex.html">HOME</a></li>
+            <li><a href="tunes.html">MUSIC</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1 style="margin-top: 100px; font-size: 60px;">Juice Wrld</h1>
+        <sup style="margin-top: 100px; font-size: 30px;" class="sup1">All the time, every time.</sup>
+        <br><br>
+        <video style="margin-top: 100px;" src="Juice WRLD - Ratio (NEW LEAK_UNRELEASED_CDQ).mp4" controls autoplay></video>
+        <video style="margin-top: 100px;" src="999/jwtroubledkids.mp4" controls></video>
+        <br><br>
+        <select style="margin-top: 100px;" id="audioSelect">
+            <option id="tunes" value="">Juice Wlrd (Singles)</option>
+            <option value="Demise.mp3">Demise</option>
+            <option value="Juice WRLD - Rugrats (Kicks) (NEW CDQ Leak).mp3">Rugrats</option>
+            <option value="Naruto.mp3">Naruto</option>
+            <option value="OverSprung.mp3">Oversprung</option>
+            <option value="Priceless.mp3">Priceless</option>
+            <option value="Shoot Em Down.mp3">Shoot Em Down</option>
+            <option value="Something to Prove.mp3">Something to Prove</option>
+            <option value="Swear.mp3">Swear</option>
+            <option value="White Mask.mp3">White Mask</option>
+            <option value="You.mp3">You</option>
+            <option value="999/4 Instance.mp3">4 Instance</option>
+            <option value="999/Crystal.mp3">Crystal</option>
+            <option value="You.mp3">You</option>
+            <option value="999/4 Instance.mp3">4 Instance</option>
+            <option value="999/Crystal.mp3">Crystal</option>
+            <option value="999/Juice WRLD - Afterlife (New Leak).mp3">Juice WRLD - Afterlife (New Leak)</option>
+            <option value="999/Juice WRLD - Ball [UNRELEASED].mp3">Juice WRLD - Ball [UNRELEASED]</option>
+            <option value="999/Juice WRLD - Californication (Unreleased).mp3">Juice WRLD - Californication (Unreleased)</option>
+            <option value="999/Juice WRLD - Cupids Carcass (Unreleased) (New Leak).mp3">Juice WRLD - Cupids Carcass (Unreleased) (New Leak)</option>
+            <option value="999/Juice WRLD - Flavor (Official CDQ) (Unreleased).mp3">Juice WRLD - Flavor (Official CDQ) (Unreleased)</option>
+            <option value="999/Juice WRLD - GTA (Unreleased).mp3">Juice WRLD - GTA (Unreleased)</option>
+            <option value="999/Juice WRLD - Left 4 Dead [UNRELEASED].mp3">Juice WRLD - Left 4 Dead [UNRELEASED]</option>
+            <option value="999/Juice WRLD - Nightmare (Unreleased).mp3">Juice WRLD - Nightmare (Unreleased)</option>
+            <option value="999/Juice WRLD - No Fears leak.mp3">Juice WRLD - No Fears leak</option>
+            <option value="999/Juice WRLD - Rain Dance (Official Lyric Video) [UNRELEASED].mp3">Juice WRLD - Rain Dance (Official Lyric Video) [UNRELEASED]</option>
+            <option value="999/Juice WRLD - Reason (CDQ).mp3">Juice WRLD - Reason (CDQ)</option>
+            <option value="999/Juice WRLD - Rotate [UNRELEASED].mp3">Juice WRLD - Rotate [UNRELEASED]</option>
+            <option value="999/Juice WRLD - So Low (Unreleased).mp3">Juice WRLD - So Low (Unreleased)</option>
+            <option value="999/Juice WRLD - So What [UNRELEASED].mp3">Juice WRLD - So What [UNRELEASED]</option>
+            <option value="999/Juice WRLD - Spanglish (Unreleased).mp3">Juice WRLD - Spanglish (Unreleased)</option>
+            <option value="999/Juice Wrld - AP Tik Tok ( 2019 My Year ) (Unreleased).mp3">Juice Wrld - AP Tik Tok ( 2019 My Year ) (Unreleased)</option>
+            <option value="999/Never Switch.mp3">Never Switch</option>
+            <option value="999/TB3.mp3">TB3</option>
+            <option value="999/Uh Huh.mp3">Uh Huh</option>
+            <option value="999/jwftt.mp3">FTT</option>
+            <option value="Leaks/24 Hours (Secure The Bag).mp3">24 Hours (Secure The Bag)</option>
+            <option value="Leaks/6 Kiss (v1) [with YNW Melly & Trippie Redd].mp3">6 Kiss (v1) [with YNW Melly & Trippie Redd]</option>
+            <option value="Leaks/6.mp3">6</option>
+            <option value="Leaks/90210.mp3">90210</option>
+            <option value="Leaks/999.mp3">999</option>
+            <option value="Leaks/Addicted.mp3">Addicted</option>
+            <option value="Leaks/All Girls Are The Same - Remix (ft. Lil Yachty).mp3">All Girls Are The Same - Remix (ft. Lil Yachty)</option>
+            <option value="Leaks/All Of Me.mp3">All Of Me</option>
+            <option value="Leaks/All Smoke.mp3">All Smoke</option>
+            <option value="Leaks/Alright.mp3">Alright</option>
+            <option value="Leaks/Analog.mp3">Analog</option>
+            <option value="Leaks/Another Way.mp3">Another Way</option>
+            <option value="Leaks/Any Other Way.mp3">Any Other Way</option>
+            <option value="Leaks/Army Armory.mp3">Army Armory</option>
+            <option value="Leaks/Back In Chicago.mp3">Back In Chicago</option>
+            <option value="Leaks/Bad Boy (v4) [feat. Young Thug].mp3">Bad Boy (v4) [feat. Young Thug]</option>
+            <option value="Leaks/Bandit (v1) [Molly Savage].mp3">Bandit (v1) [Molly Savage]</option>
+            <option value="Leaks/Bank Account.mp3">Bank Account</option>
+            <option value="Leaks/Barbarian.mp3">Barbarian</option>
+            <option value="Leaks/Been Myself (6 Kiss Demo).mp3">Been Myself (6 Kiss Demo)</option>
+            <option value="Leaks/Been Through This (feat. Miley Cyrus).mp3">Been Through This (feat. Miley Cyrus)</option>
+            <option value="Leaks/Best Around.mp3">Best Around</option>
+            <option value="Leaks/Best Believe.mp3">Best Believe</option>
+            <option value="Leaks/Big Swag (v2).mp3">Big Swag (v2)</option>
+            <option value="Leaks/Big Swag.mp3">Big Swag</option>
+            <option value="Leaks/Blastoff (with Trippie Redd) [v1].mp3">Blastoff (with Trippie Redd) [v1]</option>
+            <option value="Leaks/Blue Shit.mp3">Blue Shit</option>
+            <option value="Leaks/Bonnie & Clyde.mp3">Bonnie & Clyde</option>
+            <option value="Leaks/Boondocks.mp3">Boondocks</option>
+            <option value="Leaks/Boss Of Me.mp3">Boss Of Me</option>
+            <option value="Leaks/Buck 50 (v1).mp3">Buck 50 (v1)</option>
+            <option value="Leaks/Bullet For My Valentine.mp3">Bullet For My Valentine</option>
+            <option value="Leaks/Can't Help It.mp3">Can't Help It</option>
+            <option value="Leaks/Can't Let Go.mp3">Can't Let Go</option>
+            <option value="Leaks/Carry It.mp3">Carry It</option>
+            <option value="Leaks/Chimp.mp3">Chimp</option>
+            <option value="Leaks/Chrome.mp3">Chrome</option>
+            <option value="Leaks/Cigarettes.mp3">Cigarettes</option>
+            <option value="Leaks/Classroom.mp3">Classroom</option>
+            <option value="Leaks/Codeine Guzzler.mp3">Codeine Guzzler</option>
+            <option value="Leaks/Complications.mp3">Complications</option>
+            <option value="Leaks/Confide.mp3">Confide</option>
+            <option value="Leaks/Confused (feat. Lil Yachty).mp3">Confused (feat. Lil Yachty)</option>
+            <option value="Leaks/Coraline.mp3">Coraline</option>
+            <option value="Leaks/DJ Khaled.mp3">DJ Khaled</option>
+            <option value="Leaks/Day 1.mp3">Day 1</option>
+            <option value="Leaks/Death Penalty.mp3">Death Penalty</option>
+            <option value="Leaks/Devil Horns.mp3">Devil Horns</option>
+            <option value="Leaks/Die To Live.mp3">Die To Live</option>
+            <option value="Leaks/Different Phases.mp3">Different Phases</option>
+            <option value="Leaks/Do It.mp3">Do It</option>
+            <option value="Leaks/Don't Care (2017).mp3">Don't Care (2017)</option>
+            <option value="Leaks/Don't Go.mp3">Don't Go</option>
+            <option value="Leaks/Don't Know What I'm On.mp3">Don't Know What I'm On</option>
+            <option value="Leaks/Don’t Got Time.mp3">Don’t Got Time</option>
+            <option value="Leaks/Drivin' So Fast.mp3">Drivin' So Fast</option>
+            <option value="Leaks/Evil Twins (with Ski Mask the Slump God).mp3">Evil Twins (with Ski Mask the Slump God)</option>
+            <option value="Leaks/Faded.mp3">Faded</option>
+            <option value="Leaks/Fast Forward.mp3">Fast Forward</option>
+            <option value="Leaks/Fire In My Lungs.mp3">Fire In My Lungs</option>
+            <option value="Leaks/Flavor.mp3">Flavor</option>
+            <option value="Leaks/Flintstones.mp3">Flintstones</option>
+            <option value="Leaks/Floor It.mp3">Floor It</option>
+            <option value="Leaks/Foo Foo (feat. G Herbo).mp3">Foo Foo (feat. G Herbo)</option>
+            <option value="Leaks/For The Team (feat. Lil Yachty).mp3">For The Team (feat. Lil Yachty)</option>
+            <option value="Leaks/Forever Love.mp3">Forever Love</option>
+            <option value="Leaks/Friends Die (Fuck About Your Feelings).mp3">Friends Die (Fuck About Your Feelings)</option>
+            <option value="Leaks/GTA.mp3">GTA</option>
+            <option value="Leaks/Gave Her All Of Me.mp3">Gave Her All Of Me</option>
+            <option value="Leaks/Glowed Up (v2).mp3">Glowed Up (v2)</option>
+            <option value="Leaks/Go Go Go (with The Kid Laroi).mp3">Go Go Go (with The Kid Laroi)</option>
+            <option value="Leaks/Go Home.mp3">Go Home</option>
+            <option value="Leaks/Grateful (v2).mp3">Grateful (v2)</option>
+            <option value="Leaks/Heavy.mp3">Heavy</option>
+            <option value="Leaks/Hell (feat. Mthang).mp3">Hell (feat. Mthang)</option>
+            <option value="Leaks/Hennessy.mp3">Hennessy</option>
+            <option value="Leaks/Hit A Lick.mp3">Hit A Lick</option>
+            <option value="Leaks/I Do This.mp3">I Do This</option>
+            <option value="Leaks/I Don't Need It.mp3">I Don't Need It</option>
+            <option value="Leaks/Iceberg Avalanche (Freestyle).mp3">Iceberg Avalanche (Freestyle)</option>
+            <option value="Leaks/In A Minute (v2) [feat. Takeoff & Lil Skies].mp3">In A Minute (v2) [feat. Takeoff & Lil Skies]</option>
+            <option value="Leaks/In My Bag.mp3">In My Bag</option>
+            <option value="Leaks/Infatuated.mp3">Infatuated</option>
+            <option value="Unreleased-2/5 AM.mp3">5 AM</option>
+            <option value="Unreleased-2/6.mp3">6</option>
+            <option value="Unreleased-2/8 minute freestyle.mp3">8 minute freestyle</option>
+            <option value="Unreleased-2/All Girls Are The Same [Apple Music Exclusive].mp3">All Girls Are The Same [Apple Music Exclusive]</option>
+            <option value="Unreleased-2/All Of Me.mp3">All Of Me</option>
+            <option value="Unreleased-2/All Talk.mp3">All Talk</option>
+            <option value="Unreleased-2/All The Same.mp3">All The Same</option>
+            <option value="Unreleased-2/Another Way.mp3">Another Way</option>
+            <option value="Unreleased-2/Anxiety.mp3">Anxiety</option>
+            <option value="Unreleased-2/Any Other Way.mp3">Any Other Way</option>
+            <option value="Unreleased-2/Astray.mp3">Astray</option>
+            <option value="Unreleased-2/Bag.mp3">Bag</option>
+            <option value="Unreleased-2/Ball.mp3">Ball</option>
+            <option value="Unreleased-2/Bandit (OG).mp3">Bandit (OG)</option>
+            <option value="Unreleased-2/Barbarian.mp3">Barbarian</option>
+            <option value="Unreleased-2/Been A While.mp3">Been A While</option>
+            <option value="Unreleased-2/Best Around.mp3">Best Around</option>
+            <option value="Unreleased-2/Big Swag.mp3">Big Swag</option>
+            <option value="Unreleased-2/Birds Eye View.mp3">Birds Eye View</option>
+            <option value="Unreleased-2/Bitch youre done.mp3">Bitch youre done</option>
+            <option value="Unreleased-2/Blastoff (ft. Juice WRLD)(v4).mp3">Blastoff (ft. Juice WRLD)(v4)</option>
+            <option value="Unreleased-2/Bottle.mp3">Bottle</option>
+            <option value="Unreleased-2/Bullet For My Valentine.mp3">Bullet For My Valentine</option>
+            <option value="Unreleased-2/Cake.mp3">Cake</option>
+            <option value="Unreleased-2/Cant Survive.mp3">Cant Survive</option>
+            <option value="Unreleased-2/Carry it.mp3">Carry it</option>
+            <option value="Unreleased-2/Chimp.mp3">Chimp</option>
+            <option value="Unreleased-2/Cigarettes.mp3">Cigarettes</option>
+            <option value="Unreleased-2/Codeine Guzzler.mp3">Codeine Guzzler</option>
+            <option value="Unreleased-2/Come Around.mp3">Come Around</option>
+            <option value="Unreleased-2/Complications .mp3">Complications</option>
+            <option value="Unreleased-2/Confide.mp3">Confide</option>
+            <option value="Unreleased-2/Coraline.mp3">Coraline</option>
+            <option value="Unreleased-2/Cruising.mp3">Cruising</option>
+            <option value="Unreleased-2/Demon Love.mp3">Demon Love</option>
+            <option value="Unreleased-2/Devil Horns.mp3">Devil Horns</option>
+            <option value="Unreleased-2/Drugs Are My Friends.mp3">Drugs Are My Friends</option>
+            <option value="Unreleased-2/Dumb Slut.mp3">Dumb Slut</option>
+            <option value="Unreleased-2/Electric Chair.mp3">Electric Chair</option>
+            <option value="Unreleased-2/Empty Acapella.mp3">Empty Acapella</option>
+            <option value="Unreleased-2/Fast Forward.mp3">Fast Forward</option>
+            <option value="Unreleased-2/Fire In My Lungs.mp3">Fire In My Lungs</option>
+            <option value="Unreleased-2/Fireflies.mp3">Fireflies</option>
+            <option value="Unreleased-2/First Time.mp3">First Time</option>
+            <option value="Unreleased-2/Flavor.mp3">Flavor</option>
+            <option value="Unreleased-2/Fleur De Lis.mp3">Fleur De Lis</option>
+            <option value="Unreleased-2/Forever (v2).mp3">Forever (v2)</option>
+            <option value="Unreleased-2/Freestyle.mp3">Freestyle</option>
+            <option value="Unreleased-2/From The Start.mp3">From The Start</option>
+            <option value="Unreleased-2/GTA.mp3">GTA</option>
+            <option value="Unreleased-2/Game.mp3">Game</option>
+            <option value="Unreleased-2/Gave Her All Of Me.mp3">Gave Her All Of Me</option>
+            <option value="Unreleased-2/Girl With The Blonde Hair.mp3">Girl With The Blonde Hair</option>
+            <option value="Unreleased-2/Girlfriend.mp3">Girlfriend</option>
+            <option value="Unreleased-2/Give me my fix.mp3">Give me my fix</option>
+            <option value="Unreleased-2/Good Days.mp3">Good Days</option>
+            <option value="Unreleased-2/Got Nothing On Me.mp3">Got Nothing On Me</option>
+            <option value="Unreleased-2/Hate Her Friends.mp3">Hate Her Friends</option>
+            <option value="Unreleased-2/Heart of mine.mp3">Heart of mine</option>
+            <option value="Unreleased-2/Heavy.mp3">Heavy</option>
+            <option value="Unreleased-2/Hell.mp3">Hell</option>
+            <option value="Unreleased-2/Hennessy.mp3">Hennessy</option>
+            <option value="Unreleased-2/Hi-Tech Talk.mp3">Hi-Tech Talk</option>
+            <option value="Unreleased-2/Hit A Lick.mp3">Hit A Lick</option>
+            <option value="Unreleased-2/Hunnid.mp3">Hunnid</option>
+            <option value="Unreleased-2/I Wanna.mp3">I Wanna</option>
+            <option value="Unreleased-2/I don't need it.mp3">I don't need it</option>
+            <option value="Unreleased-2/I don’t know.mp3">I don’t know</option>
+            <option value="Unreleased-2/I love it.mp3">I love it</option>
+            <option value="Unreleased-2/Im the Shit.mp3">Im the Shit</option>
+            <option value="Unreleased-2/In A Minute.mp3">In A Minute</option>
+            <option value="Unreleased-2/In My Head.mp3">In My Head</option>
+            <option value="Unreleased-2/In The Trap.mp3">In The Trap</option>
+            <option value="Unreleased-2/In This Bitch.mp3">In This Bitch</option>
+            <option value="Unreleased-2/JW - 90210.mp3">JW - 90210</option>
+            <option value="Unreleased-2/Jeffery.mp3">Jeffery</option>
+            <option value="Unreleased-2/Jordan.mp3">Jordan</option>
+            <option value="Unreleased-2/Juicy.mp3">Juicy</option>
+            <option value="Unreleased-2/Karate kid.mp3">Karate kid</option>
+            <option value="Unreleased-2/Kawasaki.mp3">Kawasaki</option>
+            <option value="Unreleased-2/Keep up.mp3">Keep up</option>
+            <option value="Unreleased-3/Racks In rough.mp3">Racks In rough</option>
+            <option value="Unreleased-3/Ran Off.mp3">Ran Off</option>
+            <option value="Unreleased-3/Reach Freestyle.mp3">Reach Freestyle</option>
+            <option value="Unreleased-3/Rebel Blood.mp3">Rebel Blood</option>
+            <option value="Unreleased-3/Right Now.mp3">Right Now</option>
+            <option value="Unreleased-3/Road Runners.mp3">Road Runners</option>
+            <option value="Unreleased-3/Robbery.mp3">Robbery</option>
+            <option value="Unreleased-3/Rockstar Status.mp3">Rockstar Status</option>
+            <option value="Unreleased-3/Rockstar in His Prime.mp3">Rockstar in His Prime</option>
+            <option value="Unreleased-3/Rodents rough.mp3">Rodents rough</option>
+            <option value="Unreleased-3/Run That Shit.mp3">Run That Shit</option>
+            <option value="Unreleased-3/Sad Master 2.mp3">Sad Master 2</option>
+            <option value="Unreleased-3/Sad.mp3">Sad</option>
+            <option value="Unreleased-3/Safe.mp3">Safe</option>
+            <option value="Unreleased-3/Scarface.mp3">Scarface</option>
+            <option value="Unreleased-3/Shit Talk.mp3">Shit Talk</option>
+            <option value="Unreleased-3/Shoot For Love.mp3">Shoot For Love</option>
+            <option value="Unreleased-3/Slasher.mp3">Slasher</option>
+            <option value="Unreleased-3/Slenderman.mp3">Slenderman</option>
+            <option value="Unreleased-3/Smoke.mp3">Smoke</option>
+            <option value="Unreleased-3/Some More.mp3">Some More</option>
+            <option value="Unreleased-3/Sour.mp3">Sour</option>
+            <option value="Unreleased-3/Stick Talk(lava girl).mp3">Stick Talk(lava girl)</option>
+            <option value="Unreleased-3/Stick Talk.mp3">Stick Talk</option>
+            <option value="Unreleased-3/Talking to Voices.mp3">Talking to Voices</option>
+            <option value="Unreleased-3/Taskforce.mp3">Taskforce</option>
+            <option value="Unreleased-3/Tell Your Friends.mp3">Tell Your Friends</option>
+            <option value="Unreleased-3/Tempted.mp3">Tempted</option>
+            <option value="Unreleased-3/The Race.mp3">The Race</option>
+            <option value="Unreleased-3/This is Me OG.mp3">This is Me OG</option>
+            <option value="Unreleased-3/This is Me-Misery Avenue.mp3">This is Me-Misery Avenue</option>
+            <option value="Unreleased-3/Thoughts.mp3">Thoughts</option>
+            <option value="Unreleased-3/Tick Tock.mp3">Tick Tock</option>
+            <option value="Unreleased-3/Tonight.mp3">Tonight</option>
+            <option value="Unreleased-3/Too Far.mp3">Too Far</option>
+            <option value="Unreleased-3/Triple 9.mp3">Triple 9</option>
+            <option value="Unreleased-3/Underworld.mp3">Underworld</option>
+            <option value="Unreleased-3/Used to.mp3">Used to</option>
+            <option value="Unreleased-3/Watch Me.mp3">Watch Me</option>
+            <option value="Unreleased-3/Wavy.mp3">Wavy</option>
+            <option value="Unreleased-3/Way too many.mp3">Way too many</option>
+            <option value="Unreleased-3/We Dont Get Along.mp3">We Dont Get Along</option>
+            <option value="Unreleased-3/What To Think.mp3">What To Think</option>
+            <option value="Unreleased-3/Whats Brakkin (ft. Offset).mp3">Whats Brakkin (ft. Offset)</option>
+            <option value="Unreleased-3/Where I Stay.mp3">Where I Stay</option>
+            <option value="Unreleased-3/Woah.mp3">Woah</option>
+            <option value="Unreleased-3/Work.mp3">Work</option>
+            <option value="Unreleased-3/Wrong Time.mp3">Wrong Time</option>
+            <option value="Unreleased-3/Yeah Yeah.mp3">Yeah Yeah</option>
+            <option value="Unreleased-3/You I.mp3">You I</option>
+            <option value="Unreleased-3/You Wouldnt Understand.mp3">You Wouldnt Understand</option>
+            <option value="Unreleased/Kickflip.mp3">Kickflip</option>
+            <option value="Unreleased/Kill Benjamin.mp3">Kill Benjamin</option>
+            <option value="Unreleased/Lair.mp3">Lair</option>
+            <option value="Unreleased/Lavish.mp3">Lavish</option>
+            <option value="Unreleased/Lean Wit Me [Apple Music Exclusive].mp3">Lean Wit Me [Apple Music Exclusive]</option>
+            <option value="Unreleased/Leave Me Alone.mp3">Leave Me Alone</option>
+            <option value="Unreleased/Let Go.mp3">Let Go</option>
+            <option value="Unreleased/Life Chase.mp3">Life Chase</option>
+            <option value="Unreleased/Lifes A Dungeon.mp3">Lifes A Dungeon</option>
+            <option value="Unreleased/Living at the Top.mp3">Living at the Top</option>
+            <option value="Unreleased/London Interlude.mp3">London Interlude</option>
+            <option value="Unreleased/Lose You.mp3">Lose You</option>
+            <option value="Unreleased/Lost Love.mp3">Lost Love</option>
+            <option value="Unreleased/Love And Leave Them.mp3">Love And Leave Them</option>
+            <option value="Unreleased/Love No Hoe.mp3">Love No Hoe</option>
+            <option value="Unreleased/Love You Always.mp3">Love You Always</option>
+            <option value="Unreleased/Lucid Dreams [Apple Music Exclusive].mp3">Lucid Dreams [Apple Music Exclusive]</option>
+            <option value="Unreleased/Make It Sell.mp3">Make It Sell</option>
+            <option value="Unreleased/Masterpiece.mp3">Masterpiece</option>
+            <option value="Unreleased/Me.mp3">Me</option>
+            <option value="Unreleased/Midnight.mp3">Midnight</option>
+            <option value="Unreleased/Money Hunt.mp3">Money Hunt</option>
+            <option value="Unreleased/Motions.mp3">Motions</option>
+            <option value="Unreleased/Narcotics.mp3">Narcotics</option>
+            <option value="Unreleased/Naruto.mp3">Naruto</option>
+            <option value="Unreleased/Nascar.mp3">Nascar</option>
+            <option value="Unreleased/Never Ever Good.mp3">Never Ever Good</option>
+            <option value="Unreleased/New Girl.mp3">New Girl</option>
+            <option value="Unreleased/No More.mp3">No More</option>
+            <option value="Unreleased/No Reason.mp3">No Reason</option>
+            <option value="Unreleased/No Short Cuts (ft. Juice WRLD).mp3">No Short Cuts (ft. Juice WRLD)</option>
+            <option value="Unreleased/Numb The Pain.mp3">Numb The Pain</option>
+            <option value="Unreleased/Oceans (ft. Juice WRLD).mp3">Oceans (ft. Juice WRLD)</option>
+            <option value="Unreleased/Oh Dear.mp3">Oh Dear</option>
+            <option value="Unreleased/Oh My Oh My.mp3">Oh My Oh My</option>
+            <option value="Unreleased/On Time.mp3">On Time</option>
+            <option value="Unreleased/Out my body (ft. G herbo).mp3">Out my body (ft. G herbo)</option>
+            <option value="Unreleased/Outta Pocket.mp3">Outta Pocket</option>
+            <option value="Unreleased/Percaholic.mp3">Percaholic</option>
+            <option value="Unreleased/Percs.mp3">Percs</option>
+            <option value="Unreleased/Pesos.mp3">Pesos</option>
+            <option value="Unreleased/Play Your Role.mp3">Play Your Role</option>
+            <option value="Unreleased/Plug.mp3">Plug</option>
+            <option value="Unreleased/Porridge.mp3">Porridge</option>
+            <option value="Unreleased/Primetime.mp3">Primetime</option>
+            <option value="Unreleased/Purple Substance.mp3">Purple Substance</option>
+            <option value="Unreleased/Put Me Down.mp3">Put Me Down</option>
+            <option value="Unreleased/Race Beginning.mp3">Race Beginning</option>
+        </select>
+        <br><br>
+        <footer style="margin-bottom: 20px; font-size: 33px;">
+            <div class="footer">
+                &copy; Made by <a href="http://github.com/KAXXX0/">KAXXX0</a>
+                <p style="font-size: 18px; margin-top: 50px;"><b style="color: #e28800;">🟉 About Us</b> <br><br>
+
+                    Welcome to Quake, where music meets freedom. Our mission is simple: we're here to make sure you enjoy your music without any hassles. We believe music should be available to everyone, and it should be free.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 What Makes Us Special</b>
+                    <br><br>
+                    Unlike some other platforms, we give you a cool feature for free: you can listen to music in the background without paying extra. You know how some websites, like YouTube, ask for money for this? Well, we don't. We want your music experience to be smooth and uninterrupted.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 Our Focus: Juice WRLD</b>
+                    <br><br>
+                    We're big fans of Juice WRLD, and our website is mainly all about his music. From his biggest hits to his lesser-known tracks, you'll find them all here. Our goal is to keep Juice WRLD's music alive for his fans.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 What's Coming Soon</b>
+                    <br><br>
+                    But there's more to come. We're working on a feature that lets you upload your own songs. Yes, you can share your favorite tunes with the world. We believe music is for everyone to enjoy and share, and we want to make that easy for you.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 Our Promise</b>
+                    <br><br>
+                    We want to be clear: Quake isn't about making money. You won't see annoying ads, and you won't be asked to pay for a subscription. Our only aim is to create a space where music lovers can enjoy their favorite songs without any fuss.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 Join the Music Community</b>
+                    <br><br>
+                    We invite you to be part of our musical journey. Dive into Juice WRLD's tunes, look forward to our upcoming features, and connect with fellow music lovers. Together, we'll create a place where the music never stops, and it's always free.
+                    <br><br>
+                    Thanks for choosing Quake as your music destination. Let's enjoy the beats of life together!<br><br></p>
+            </div>
+        </footer>
+        <audio id="audio-player" controls></audio>
+    </main>
+    <script>
+        function playAudio() {
+            const audioPlayer = document.getElementById('audio-player');
+            const audioSelect = document.getElementById('audioSelect');
+
+            audioSelect.addEventListener('change', function() {
+                const selectedOption = audioSelect.options[audioSelect.selectedIndex];
+                const audioSource = selectedOption.value;
+
+                audioPlayer.src = audioSource;
+
+                audioPlayer.play();
+            });
+
+            audioPlayer.addEventListener('ended', function() {
+                const selectedIndex = audioSelect.selectedIndex;
+
+                if (selectedIndex < audioSelect.options.length - 1) {
+                    audioSelect.selectedIndex = selectedIndex + 1;
+
+                    audioSelect.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        window.addEventListener('load', playAudio);
+    </script>
+</body>
+</html>

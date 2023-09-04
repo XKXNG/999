@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quake</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            text-shadow: 1px 1px 2px black;
+            margin-top: 10px;
+            font-weight: 600;
+            text-shadow: #000000 2px 2px 2px solid;
+            height: 100%;
+            text-align: center;
+            color: #634402;
+            background: linear-gradient(#331400, #ffffff);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 35px;
+        }
+        nav ol {
+            list-style-type: none;
+            word-spacing: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+        }
+        nav ol li a {
+            text-decoration: none;
+        }
+        audio{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            bottom: 0;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px 2px 2px solid #ffffff;
+        }
+        a{
+            color: #e2a600;
+        }
+        a:visited{
+           color: #ffbb00; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ol>
+            <li><a href="uindex.html">HOME</a></li>
+            <li><a href="tunes.html">MUSIC</a></li>
+            <li><a href="#footer">ABOUT</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1 style="margin-top: 100px; font-size: 60px;">We're here for you.</h1>
+        <p style="margin-bottom: 100px; font-size: 30px;">All the time, every time.</p>
+        <br><br>
+        <h2 style="margin-bottom: 100px;">YouTube Video Search</h2>
+        <input type="text" id="searchInput" placeholder="Enter a search term">
+        <button style="margin-bottom: 50px;" id="searchButton">Search</button>
+        <div style="margin-bottom: 30px;" id="results"></div>
+        <button id="loadMore" style="display: none;">Load More</button>
+        <br><br>
+        <br><br>
+        <footer style="margin-bottom: 20px; font-size: 33px;">
+            <div class="footer">
+                &copy; Made by <a href="http://github.com/KAXXX0/">KAXXX0</a><br><br>
+                <b style="font-size: 22px; color: red;">NOT FINSHED (PERFORMANCE ADJUSTMENTS COMING SOON)</b>
+                <p style="font-size: 18px; margin-top: 50px;"><b style="color: #e28800;">🟉 About Us</b> <br><br>
+
+                    Welcome to Quake, where music meets freedom. Our mission is simple: we're here to make sure you enjoy your music without any hassles. We believe music should be available to everyone, and it should be free.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 What Makes Us Special</b>
+                    <br><br>
+                    Unlike some other platforms, we give you a cool feature for free: you can listen to music in the background without paying extra. You know how some websites, like YouTube, ask for money for this? Well, we don't. We want your music experience to be smooth and uninterrupted.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 Our Focus: Juice WRLD</b>
+                    <br><br>
+                    We're big fans of Juice WRLD, and our website is mainly all about his music. From his biggest hits to his lesser-known tracks, you'll find them all here. Our goal is to keep Juice WRLD's music alive for his fans.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 What's Coming Soon</b>
+                    <br><br>
+                    But there's more to come. We're working on a feature that lets you upload your own songs. Yes, you can share your favorite tunes with the world. We believe music is for everyone to enjoy and share, and we want to make that easy for you.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 Our Promise</b>
+                    <br><br>
+                    We want to be clear: Quake isn't about making money. You won't see annoying ads, and you won't be asked to pay for a subscription. Our only aim is to create a space where music lovers can enjoy their favorite songs without any fuss.
+                    <br><br>
+                    <b style="color: #e28800;">🟉 Join the Music Community</b>
+                    <br><br>
+                    We invite you to be part of our musical journey. Dive into Juice WRLD's tunes, look forward to our upcoming features, and connect with fellow music lovers. Together, we'll create a place where the music never stops, and it's always free.
+                    <br><br>
+                    Thanks for choosing Quake as your music destination. Let's enjoy the beats of life together!<br><br></p>
+            </div>
+        </footer>
+    </main>
+    <script>
+        const apiKey = 'AIzaSyAqXNqaQYHtA0h6hXoDqUn8mYN_-Ke7aLw';
+        // Honestly, i couldn't care less with what you do with this. However, please refrain from anything malicious.
+        let nextPageToken = '';
+        const searchInput = document.getElementById('searchInput');
+        const resultsDiv = document.getElementById('results');
+        const loadMoreButton = document.getElementById('loadMore');
+        const searchButton = document.getElementById('searchButton');
+
+        searchButton.addEventListener('click', () => {
+            nextPageToken = '';
+            loadMoreButton.style.display = 'none';
+            searchYouTube();
+        });
+
+        searchInput.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                nextPageToken = '';
+                loadMoreButton.style.display = 'none';
+                searchYouTube();
+            }
+        });
+
+        loadMoreButton.addEventListener('click', () => {
+            loadMoreVideos();
+        });
+
+        function openYouTubeVideo(videoId) {
+            window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+        }
+
+        function searchYouTube() {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm === '') {
+                alert('Please enter a search term.');
+                return;
+            }
+
+            fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchTerm}&part=snippet&type=video`)
+                .then(response => response.json())
+                .then(data => {
+                    displayVideos(data.items);
+                    if (data.nextPageToken) {
+                        nextPageToken = data.nextPageToken;
+                        loadMoreButton.style.display = 'block';
+                    } else {
+                        loadMoreButton.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function loadMoreVideos() {
+            const searchTerm = searchInput.value.trim();
+            fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchTerm}&part=snippet&type=video&pageToken=${nextPageToken}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayVideos(data.items);
+                    if (data.nextPageToken) {
+                        nextPageToken = data.nextPageToken;
+                    } else {
+                        loadMoreButton.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function displayVideos(items) {
+            resultsDiv.innerHTML = '';
+            items.forEach(item => {
+                const videoId = item.id.videoId;
+                const title = item.snippet.title;
+                const thumbnailUrl = item.snippet.thumbnails.medium.url;
+                const videoDiv = document.createElement('div');
+                videoDiv.innerHTML = `
+                    <h2>${title}</h2>
+                    <a href="javascript:void(0);" onclick="openYouTubeVideo('${videoId}')">
+                        <img src="${thumbnailUrl}" alt="${title}">
+                    </a>
+                `;
+                resultsDiv.appendChild(videoDiv);
+            });
+        }
+    </script>
+</body>
+</html>
